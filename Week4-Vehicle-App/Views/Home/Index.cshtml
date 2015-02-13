@@ -1,0 +1,16 @@
+﻿@model List<Week4_Vehicle_App.Models.Vehicle>
+
+<div class="container-fluid">
+    <div class="row">
+        <h1>Vehicles For Sale</h1>
+        @foreach (var vehicle in Model)
+        { 
+        <div class="well">
+            <h2>@vehicle.Year @vehicle.Make @vehicle.Model</h2>
+            <h4>Horsepower: @vehicle.Horsepower Torque: @vehicle.Torque</h4>
+            <h2>$@vehicle.Price</h2>
+            @Html.ActionLink("Details", "Details", new { id = vehicle.ID }, new { @class = "btn btn-info" })
+       </div>
+        }
+    </div>
+</div>
