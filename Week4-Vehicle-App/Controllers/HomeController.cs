@@ -50,5 +50,46 @@ namespace Week4_Vehicle_App.Controllers
                 return View(model);
             }
         }
+
+        public ActionResult ShowCars()
+        {
+            List<Car> model = new List<Car>();
+            foreach (Vehicle vehicle in listModel)
+            {
+                if (vehicle.VehicleType == VehicleType.Car)
+                {
+                    model.Add((Car)vehicle);
+                }
+            }
+            return View(model);
+        }
+
+        public ActionResult ShowMotorcycles()
+        {
+            List<Motorcycle> model = new List<Motorcycle>();
+            foreach (Vehicle vehicle in listModel)
+            {
+                if (vehicle.VehicleType == VehicleType.Motorcycle)
+                {
+                    model.Add((Motorcycle)vehicle);
+                }
+            }
+            return View(model);
+        }
+
+        public ActionResult ShowTrucks()
+        {
+            List<Truck> model = new List<Truck>();
+            {
+                foreach (Vehicle vehicle in listModel)
+                {
+                    if (vehicle.VehicleType == VehicleType.Truck)
+                    {
+                        model.Add((Truck)vehicle);
+                    }
+                }
+            }
+            return View(model);
+        }
     }
 }

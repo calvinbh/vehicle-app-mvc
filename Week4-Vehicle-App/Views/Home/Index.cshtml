@@ -1,8 +1,18 @@
 ﻿@model List<Week4_Vehicle_App.Models.Vehicle>
 
+<br />
+
 <div class="container-fluid">
     <div class="row">
+
+        @Html.ActionLink("Cars", "ShowCars", null, new { @class = "btn btn-primary" }) 
+
+        @Html.ActionLink("Mortorcycles", "ShowMotorcycles", null, new { @class = "btn btn-primary" })
+
+        @Html.ActionLink("Trucks", "ShowTrucks", null, new { @class = "btn btn-primary" })
+
         <h1>Vehicles For Sale</h1>
+
         @foreach (var vehicle in Model)
         { 
         <div class="well">

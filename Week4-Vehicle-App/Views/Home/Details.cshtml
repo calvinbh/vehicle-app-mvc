@@ -1,6 +1,15 @@
 ﻿@model Week4_Vehicle_App.Models.Vehicle
 
 <br />
+
+@Html.ActionLink("Cars", "ShowCars", null, new { @class = "btn btn-primary" })
+
+@Html.ActionLink("Mortorcycles", "ShowMotorcycles", null, new { @class = "btn btn-primary" })
+
+@Html.ActionLink("Trucks", "ShowTrucks", null, new { @class = "btn btn-primary" })
+
+<h1>More Detail</h1>
+
 <div class="well">
     <h1>@Model.Year @Model.Make @Model.Model</h1>
     <h4>Horsepower: @Model.Horsepower Torque: @Model.Torque</h4>
